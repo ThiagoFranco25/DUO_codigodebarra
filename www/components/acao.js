@@ -1,25 +1,15 @@
-// This is a JavaScript file
-
-$(document).on("click","#codigobarra",function(){
-  navigator.notification.beep(2);
-});
-
-$(document).on("click","#codigoBarra",function(){
+$(document).on("click","#a",function(){
   cordova.plugins.barcodeScanner.scan(
       function (result) {
-        if(result.text == "280720550"){
-          $(location).attr("https://www.apple.com/br/shop/buy-ipad/ipad-mini/64gb-cinza-espacial-wifi");
+        if(result.text == 280720550){
+          $(location).attr("href","https://www.apple.com/br/shop/buy-ipad/ipad-mini/64gb-cinza-espacial-wifi");
         }
          else if(result.text == "989895555"){
           $(location).attr("https://www.samsung.com/br/smartphones/galaxy-j8-j810/SM-J810MZKKZTO/");
         }
-        if(result.text == result){
+        else if(result.text == result){
           $(location).attr("url",result)
         }
-          alert("Nós temos um código de barras\n" +
-                "Resultado: " + result.text + "\n" +
-                "Formato: " + result.format + "\n" +
-                "Cancelado: " + result.cancelled);
       },
       function (error) {
           navigator.notification.alert("Scanning failed: " + error);
