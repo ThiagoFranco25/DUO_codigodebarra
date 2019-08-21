@@ -3,8 +3,17 @@ body{
   background-color: #191919;
   background-image: url("../fonts/inicio.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
+  background-attachment: fixed;
 }
+
 .botao{
-  matgin-top: 20%;
+ 
+  margin-top: 78%;
+   additive-symbols: 100%;
+   width: 40%;
+   height: 23%;
+   margin-left:31%;
+   border: none;
+   background-image:url("../fonts/botao.png");
 }
