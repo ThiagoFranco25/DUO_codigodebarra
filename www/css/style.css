@@ -3,8 +3,7 @@ body{
   background-color: #191919;
   background-image: url("../fonts/inicio.png");
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-attachment: fixed;
+  background-size: cover;
 }
 
 .botao{
